@@ -3,6 +3,7 @@ package com.technotackle.task.ui.tasks
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.technotackle.task.databinding.ActivityArrayAdditionBinding
+import com.technotackle.task.util.LogicUtil
 
 class ArrayAdditionActivity : AppCompatActivity() {
 
@@ -69,30 +70,16 @@ class ArrayAdditionActivity : AppCompatActivity() {
         val min: Int
         val max: Int
         if (type == MIN_TO_MAX) {
-            min = getMinValue(numbersList1)
-            max = getMaxValue(numbersList2)
+            min = LogicUtil.getMinValue(numbersList1)
+            max = LogicUtil.getMaxValue(numbersList2)
         } else {
-            max = getMaxValue(numbersList1)
-            min = getMinValue(numbersList2)
+            max = LogicUtil.getMaxValue(numbersList1)
+            min = LogicUtil.getMinValue(numbersList2)
         }
         val output = max + min
         return if (type == MIN_TO_MAX) "$min + $max = $output" else "$max + $min = $output"
     }
 
-    private fun getMaxValue(inputs: Array<Int>): Int {
-        var maxValue = inputs[0]
-        for (number in inputs) {
-            maxValue = if (number > maxValue) number else maxValue
-        }
-        return maxValue
-    }
 
-    private fun getMinValue(inputs: Array<Int>): Int {
-        var minValue = inputs[0]
-        for (number in inputs) {
-            minValue = if (number < minValue) number else minValue
-        }
-        return minValue
-    }
 
 }

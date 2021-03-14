@@ -3,6 +3,7 @@ package com.technotackle.task.ui.tasks
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.technotackle.task.databinding.ActivityStringConcatenationActivityBinding
+import com.technotackle.task.util.LogicUtil
 
 class StringConcatenationActivity : AppCompatActivity() {
 
@@ -28,19 +29,8 @@ class StringConcatenationActivity : AppCompatActivity() {
     }
 
     private fun setResult(input1: String, input2: String) {
-        binding.resultOutput.text = getResult(input1, input2)
+        binding.resultOutput.text = LogicUtil.getResult(input1, input2)
     }
 
-    private fun getResult(input1: String, input2: String): String {
-        var output = ""
-        val maxSize = input1.length.coerceAtLeast(input2.length)
-        for (index in 0 until maxSize) {
-            output += "${
-                if (index < input1.length) input1[index] else ""
-            }${
-                if (index < input2.length) input2[index] else ""
-            }"
-        }
-        return output
-    }
+
 }
