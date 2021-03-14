@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Tasks</string>
+
+    <string name="task1">Task 1</string>
+    <string name="task2">Task 2</string>
+    <string name="task3">Task 3</string>
+
+    <string name="enter_input">Enter the input (Alphabets Only)</string>
+    <string name="enter_input_1">Enter the input 1(Alphabets Only)</string>
+    <string name="enter_input_2">Enter the input 2(Alphabets Only)</string>
+    <string name="get_result">Get Result</string>
+    <string name="output1">Output 1 : </string>
+    <string name="output2">Output 2 : </string>
+    <string name="output">Output</string>
+
+    <string name="numbers_list_1">Numbers List 1 : </string>
+    <string name="numbers_list_2">Numbers List 2 : </string>
+
+    <string name="max_to_min">Max to Min</string>
+    <string name="min_to_max">Min to Max</string>
+
+
+    <string name="alphabets_only">ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvqxyz</string>
+
+</resources>
